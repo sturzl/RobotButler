@@ -1,5 +1,5 @@
 # RobotButler
-A robotic arm that serves various drinks! Made for a robotics and tech event hosted by Wayne State University and the [Detroit Autonomous Vehicle Group (DAVG)](https://davg.tech/). Creators: Yaro Shtyha and DAVG members [Marc Sturzl](https://github.com/sturzl/https://github.com/sturzl/), [Alex Polonsky](https://github.com/Sashulik) and Zikang Ma.
+A robotic arm that serves various drinks! Made for a robotics and tech event hosted by Wayne State University and the [Detroit Autonomous Vehicle Group (DAVG)](https://davg.tech/). Creators: Yaro Shtyha and DAVG members [Marc Sturzl](https://github.com/sturzl/), [Alex Polonsky](https://github.com/Sashulik) and Zikang Ma.
 
 ### Rough Outline
 1. Raspi serves a website on local wifi

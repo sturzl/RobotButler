@@ -11,12 +11,12 @@ Robotic arm that serves various drinks. Made by Yaro Shtyha and the [Detroit Aut
 # Software
 
 ## Python libraries for inverse kinematics
-- https://github.com/uw-biorobotics/IKBT
-- https://github.com/abr/abr_control
-- https://github.com/Phylliade/ikpy
+- [https://github.com/uw-biorobotics/IKBT](https://github.com/uw-biorobotics/IKBT)
+- [https://github.com/abr/abr_control](https://github.com/abr/abr_control)
+- [https://github.com/Phylliade/ikpy](https://github.com/Phylliade/ikpy)
 
 # Hardware
-There is a simple solution, and a more complex solution. The simple solution costs 40% more, but has half points of failure.
+There is a simple solution, and a more complex solution. The simple solution costs 40% more, but has half points of failure and WAY simpler code. The simple solutions uses 5 pumps, the complex solution uses one pump and 10 solenoids select the correct tubes.
 
 | Solution | # of parts | # of tubing joints | Price |
 | --- | --- | --- | --- |

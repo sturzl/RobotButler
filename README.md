@@ -1,22 +1,29 @@
 # RobotButler
 Robotic arm that serves various drinks. Made by Yaro Shtyha and the [Detroit Autonomous Vehicle Group](https://davg.tech/) for a recuirtment event at Wayne State University in February 2019.
 
+## Rough Outline
+1. Raspi serves website, user connects to the wifi and sends a command
+2. Raspi calculates motion for the arm, sends signal over serial to the arduino
+3. Arduino state machine updates, actuates motors through mosfets and motor control board
+4. Motor control boards handle moving the arm, mosfets turn pumps on and off
 
-# Python libraries for inverse kinematics
+# Software
+
+## Python libraries for inverse kinematics
 - https://github.com/uw-biorobotics/IKBT
 - https://github.com/abr/abr_control
 - https://github.com/Phylliade/ikpy
 
-# Parts list
-There is a simple, more reliable solution for $224 and a more complex solution for %30 less at $160.
+# Hardware
+There is a simple solution, and a more complex solution. The simple solution costs 40% more, but has half points of failure.
 
-| Solution | Common Parts | Specific parts | Total |
+| Solution | # of Parts | # of Joints | Price |
 | --- | --- | --- | --- |
-| Simple | $96 | $128 | $224 |
-| Complex | $96 | $64 | $160 |
+| Simple | 26 | 17 | $224 |
+| Complex | 40 | 39 | $160 |
 
 
-**Parts common to both solutions**
+## Parts common to both solutions
 
 | Part | Quantity | Total Price |
 |-----|-----|-----|
@@ -33,7 +40,7 @@ There is a simple, more reliable solution for $224 and a more complex solution f
 | Glue, screws, etc. | ∞ | free |
 | **Total** |  | $96 |
 
-**Parts for simple solution**
+## Parts for simple solution
 
 | Part | Quantity | Total Price |
 |-----|-----|-----|
@@ -41,7 +48,7 @@ There is a simple, more reliable solution for $224 and a more complex solution f
 | [Logic level Mosfet](https://www.ebay.com/itm/20Pcs-IRLZ44N-PBF-Power-MOSFET-Logic-Level-N-Channel-0-022OHM-TO-220-IC-Chip-USA/173493492366?hash=item2865049a8e:rk:1:pf:0) | 5 | $3 |
 | **Total** |  | $128 |
 
-**Parts for complex solution**
+## Parts for complex solution
 
 | Part | Quantity | Total Price |
 |-----|-----|-----|

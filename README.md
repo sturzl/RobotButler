@@ -1,5 +1,5 @@
 # RobotButler
-Robotic arm that serves various drinks. Made by Yaro Shtyha and [Detroit Autonomous Vehicle Group](https://davg.tech/) members [Marc Sturzl](https://github.com/sturzl/https://github.com/sturzl/) for a recuirtment event at Wayne State University in February 2019.
+Robotic arm that serves various drinks. Made by Yaro Shtyha and [Detroit Autonomous Vehicle Group](https://davg.tech/) member [Marc Sturzl](https://github.com/sturzl/https://github.com/sturzl/) for a recuirtment event at Wayne State University in February 2019.
 
 ### Rough Outline
 1. Raspi serves website, user connects to the local wifi and sends a command through the site

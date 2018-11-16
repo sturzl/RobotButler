@@ -1,5 +1,5 @@
 # RobotButler
-Robotic arm that serves various drinks 
+Robotic arm that serves various drinks. Made by Yaro Shtyha and the Detroit Autonomous Vehicle Group for a recuirtment event at Wayne State University in February 2019.
 
 
 # Python libraries for inverse kinematics

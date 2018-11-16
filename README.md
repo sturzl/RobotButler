@@ -1,7 +1,7 @@
 # RobotButler
 Robotic arm that serves various drinks. Made by Yaro Shtyha and the [Detroit Autonomous Vehicle Group](https://davg.tech/) for a recuirtment event at Wayne State University in February 2019.
 
-## Rough Outline
+### Rough Outline
 1. Raspi serves website, user connects to the local wifi and sends a command through the site
 2. Raspi calculates motion for the arm, sends signal over serial to the arduino
 3. Arduino state machine updates, actuates motors through mosfets and motor control board
@@ -10,7 +10,7 @@ Robotic arm that serves various drinks. Made by Yaro Shtyha and the [Detroit Aut
 
 # Software
 
-## Python libraries for inverse kinematics
+### Python libraries for inverse kinematics
 - [https://github.com/uw-biorobotics/IKBT](https://github.com/uw-biorobotics/IKBT)
 - [https://github.com/abr/abr_control](https://github.com/abr/abr_control)
 - [https://github.com/Phylliade/ikpy](https://github.com/Phylliade/ikpy)
@@ -24,7 +24,7 @@ There is a simple solution, and a more complex solution. The simple solution cos
 | Complex | 40 | 39 | $160 |
 
 
-## Parts common to both solutions
+### Parts common to both solutions
 
 | Part | Quantity | Total Price |
 |-----|-----|-----|
@@ -41,7 +41,7 @@ There is a simple solution, and a more complex solution. The simple solution cos
 | Glue, screws, etc. | ∞ | free |
 | **Total** |  | $96 |
 
-## Parts for simple solution
+### Parts for simple solution
 
 | Part | Quantity | Total Price |
 |-----|-----|-----|
@@ -49,7 +49,7 @@ There is a simple solution, and a more complex solution. The simple solution cos
 | [Logic level Mosfet](https://www.ebay.com/itm/20Pcs-IRLZ44N-PBF-Power-MOSFET-Logic-Level-N-Channel-0-022OHM-TO-220-IC-Chip-USA/173493492366?hash=item2865049a8e:rk:1:pf:0) | 5 | $3 |
 | **Total** |  | $128 |
 
-## Parts for complex solution
+### Parts for complex solution
 
 | Part | Quantity | Total Price |
 |-----|-----|-----|

@@ -2,10 +2,11 @@
 Robotic arm that serves various drinks. Made by Yaro Shtyha and the [Detroit Autonomous Vehicle Group](https://davg.tech/) for a recuirtment event at Wayne State University in February 2019.
 
 ## Rough Outline
-1. Raspi serves website, user connects to the wifi and sends a command
+1. Raspi serves website, user connects to the local wifi and sends a command through the site
 2. Raspi calculates motion for the arm, sends signal over serial to the arduino
 3. Arduino state machine updates, actuates motors through mosfets and motor control board
 4. Motor control boards handle moving the arm, mosfets turn pumps on and off
+5. After the arm is positioned, one of the 5 pumps will start and pump the user's choice through one of the 5 fingers
 
 # Software
 
@@ -17,7 +18,7 @@ Robotic arm that serves various drinks. Made by Yaro Shtyha and the [Detroit Aut
 # Hardware
 There is a simple solution, and a more complex solution. The simple solution costs 40% more, but has half points of failure.
 
-| Solution | # of Parts | # of Joints | Price |
+| Solution | # of parts | # of tubing joints | Price |
 | --- | --- | --- | --- |
 | Simple | 26 | 17 | $224 |
 | Complex | 40 | 39 | $160 |

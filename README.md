@@ -16,6 +16,8 @@ Find the cup and target the arm
 
 ### Architecture
 Phone/website -> wifi -> raspi served website -> serial -> arduino -> arm
+--> Starting here: https://www.hackster.io/bportaluri/web-controlled-led-animations-with-raspberry-pi-and-arduino-112025
+--> Kineamtics on raspi, hopefully the serial communication is fast enough/coordinated enough to just send motor commands to the arduino
 
 ### Python libraries for inverse kinematics
 - [https://github.com/uw-biorobotics/IKBT](https://github.com/uw-biorobotics/IKBT)

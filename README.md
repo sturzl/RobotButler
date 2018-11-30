@@ -9,7 +9,13 @@ A robotic arm that serves various drinks! Made for a robotics and tech event hos
 5. Arduino turns on the correct pump with a MOSFET
 6. User's selection is poured through one of the 5 fingers
 
+### TODO
+Find the cup and target the arm
+
 # Software
+
+### Architecture
+Phone/website -> wifi -> raspi served website -> serial -> arduino -> arm
 
 ### Python libraries for inverse kinematics
 - [https://github.com/uw-biorobotics/IKBT](https://github.com/uw-biorobotics/IKBT)
@@ -17,6 +23,8 @@ A robotic arm that serves various drinks! Made for a robotics and tech event hos
 - [https://github.com/Phylliade/ikpy](https://github.com/Phylliade/ikpy)
 
 # Hardware
+Two solutions were identified, we chose the simpler more expensive one.
+
 There is a simple solution and a more complex solution. The simple solution costs 40% more, but has half points of failure and MUCH simpler code. The simple solutions uses 5 pumps, the complex solution uses one pump and 10 solenoids which select the correct tubes.
 
 | solution | # of parts | # of tubing joints | price |

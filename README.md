@@ -1,6 +1,16 @@
 # RobotButler
 A robotic arm that serves various drinks! Made for a robotics and tech event hosted by Wayne State University and the [Detroit Autonomous Vehicle Group (DAVG)](https://davg.tech/). Creators: Yaro Shtyha and DAVG members [Marc Sturzl](https://github.com/sturzl/), [Alex Polonsky](https://github.com/Sashulik) and Zikang Ma.
 
+### To run
+- Plug an arduino into the host computer
+- Wire robot arm to arduino
+- Clone repo onto the host (linux based) computer
+- Install dependencies: sudo pip3 install pyserial flask
+- Run the script: python3 Butler.py
+- Navigate to the URL:
+  - On that machine go to 0.0.0.0 in the browser
+  - On another machine connected to the same router: Go to the host machines IP address
+  
 ### Rough Outline
 1. Raspi serves a website on local wifi
 2. User connects to the site and sends in an order
@@ -8,9 +18,6 @@ A robotic arm that serves various drinks! Made for a robotics and tech event hos
 4. Arduino state machine updates and begins moving the arm through the motor control boards
 5. Arduino turns on the correct pump with a MOSFET
 6. User's selection is poured through one of the 5 fingers
-
-### TODO
-Find the cup and target the arm
 
 # Software
 

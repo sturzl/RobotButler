@@ -6,7 +6,7 @@ A robotic arm that serves various drinks! Made for a robotics and tech event hos
 - Wire robot arm to arduino
 - Clone repo onto the host (linux based) computer
 - Install dependencies: sudo pip3 install pyserial flask
-- Run the script: python3 Butler.py
+- Run the script: ython3 Butler.py '/dev/ttyUSB______'
 - Navigate to the URL:
   - On that machine go to 0.0.0.0 in the browser
   - On another machine connected to the same router: Go to the host machines IP address
@@ -23,7 +23,7 @@ A robotic arm that serves various drinks! Made for a robotics and tech event hos
 
 ### Architecture
 Phone/website -> wifi -> raspi served website -> serial -> arduino -> arm
-- Starting here: https://www.hackster.io/bportaluri/web-controlled-led-animations-with-raspberry-pi-and-arduino-112025
+- Serve website from raspi
 - Connect raspi to Arduino
 - Run kineamtics on raspi
 - Test performance of controlling multiple motors from raspi - arduino

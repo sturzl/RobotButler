@@ -25,7 +25,7 @@ def butler():
 
 def serve_customer(selection):
     arm.aim_arm()
-    arm.pour_selection(selection)
+    arm.set_blink_speed(selection)
     arm.reset_arm()
 
 def parse_request(request):

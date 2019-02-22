@@ -1,5 +1,6 @@
 # Project specific
 LocalNotes.txt
+.idea/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

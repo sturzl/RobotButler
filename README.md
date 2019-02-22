@@ -3,10 +3,10 @@ A robotic arm that serves various drinks! Made for a robotics and tech event hos
 
 ### To run
 - Plug an arduino into the host computer
-- Wire robot arm to arduino
+- Plug robot arm to arduino
 - Clone repo onto the host (linux based) computer
 - Install dependencies: sudo pip3 install pyserial flask
-- Run the script: ython3 Butler.py '/dev/ttyUSB______'
+- Run the script: python3 Butler.py '/dev/ttyUSB______'
 - Navigate to the URL:
   - On that machine go to 0.0.0.0 in the browser
   - On another machine connected to the same router: Go to the host machines IP address
@@ -22,11 +22,9 @@ A robotic arm that serves various drinks! Made for a robotics and tech event hos
 # Software
 
 ### Architecture
-Phone/website -> wifi -> raspi served website -> serial -> arduino -> arm
-- Serve website from raspi
-- Connect raspi to Arduino
-- Run kineamtics on raspi
-- Test performance of controlling multiple motors from raspi - arduino
+Phone/website -> wifi -> raspi served website -> serial -> arduino -> serial -> arm
+- Website & kinematics on raspi
+- Arduino moves arm to target position
 
 ### Python libraries for inverse kinematics
 - [https://github.com/uw-biorobotics/IKBT](https://github.com/uw-biorobotics/IKBT)
@@ -36,7 +34,7 @@ Phone/website -> wifi -> raspi served website -> serial -> arduino -> arm
 # Hardware
 Two solutions were identified, we chose the simpler more expensive one.
 
-There is a simple solution and a more complex solution. The simple solution costs 40% more, but has half points of failure and MUCH simpler code. The simple solutions uses 5 pumps, the complex solution uses one pump and 10 solenoids which select the correct tubes.
+The simple solution costs 40% more, but has half points of failure and MUCH simpler code. The simple solutions uses 5 pumps, the complex solution uses one pump and 10 solenoids which select the correct tubes.
 
 | solution | # of parts | # of tubing joints | price |
 | :--- | :--- | :--- | :--- |
@@ -48,7 +46,7 @@ There is a simple solution and a more complex solution. The simple solution cost
 
 | part | quantity | total price |
 |:-----|:-----|:-----|
-| [NEMA 17 Stepper motors](https://www.ebay.com/itm/Stepper-Motor-Nema-17-SL42STH34-1504A-40mm-1-8A-78Oz-4-Lead-for-3D-Printers/202388518117?hash=item2f1f4bb4e5:g:fBIAAOSwd~Zbj4~G:rk:1:pf:0&LH_BIN=1) | 3 | $36  |
+| [NEMA 17 Stepper motors](https://www.ebay.com/itm/Stepper-Motor-Nema-17-SL42STH34-1504A-40mm-1-8A-78Oz-4-Lead-for-3D-Printers/202388518117?hash=item2f1f4bb4e5:g:fBIAAOSwd~Zbj4~G:rk:1:pf:0&LH_BIN=1) | 4 | $48  |
 | [check valve](https://www.usplastic.com/catalog/item.aspx?sku=64048&gclid=EAIaIQobChMI6-PswujD3gIVQ7jACh0_2ASsEAQYASABEgI4Z_D_BwE) | 5 | $6 |
 | [raspberry pi 0w](https://www.microcenter.com/product/486575/zero-w) | 1 | $5 |
 | [arduino motor shield](https://www.amazon.com/Compatible-Arduino-Duemilanove-Atomic-Market/dp/B00TMA4YSS/ref=asc_df_B00TMA4YSS/?tag=hyprod-20&linkCode=df0&hvadid=194019628201&hvpos=1o1&hvnetw=g&hvrand=13664937720553066793&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9016967&hvtargid=pla-340551339284&psc=1) | 2 | $18 |
@@ -60,22 +58,8 @@ There is a simple solution and a more complex solution. The simple solution cost
 | wifi device to send controls to raspi |  1  | free |
 | wifi router for local wifi | 1 | free |
 | glue, screws, etc. | ∞ | free |
-| **total** |  | $96 |
-
-### Parts for simple solution
-
-| part | quantity | total price |
-|:-----|:-----|:-----|
-| [paristaltic pump](https://www.ebay.com/itm/DC-12-24V-Peristaltic-Pump-Large-Flow-Dosing-Pump-Vacuum-Aquarium-Lab-Analytical/273097535778?hash=item3f95e1b122:m:mUXje-wYDBR0DV0zzfXsCEQ:rk:10:pf:0) | 5 | $125 |
-| [logic level MOSFET](https://www.ebay.com/itm/20Pcs-IRLZ44N-PBF-Power-MOSFET-Logic-Level-N-Channel-0-022OHM-TO-220-IC-Chip-USA/173493492366?hash=item2865049a8e:rk:1:pf:0) | 5 | $3 |
-| **total** |  | $128 |
-
-### Parts for complex solution
-
-| part | quantity | total price |
-|:-----|:-----|:-----|
 | [solenoid valve](https://www.ebay.com/itm/DC12V-Normally-Closed-Type-Electronic-Control-Solenoid-ESHK/223170991184?hash=item33f6071450:g:fIIAAOSw0wtavF1w:rk:14:pf:0&LH_BIN=1&autorefresh=true) | 10 | $26 |
 | [paristaltic pump](https://www.ebay.com/itm/DC-12-24V-Peristaltic-Pump-Large-Flow-Dosing-Pump-Vacuum-Aquarium-Lab-Analytical/273097535778?hash=item3f95e1b122:m:mUXje-wYDBR0DV0zzfXsCEQ:rk:10:pf:0) | 1 | $25 |
 | [5 to 1 splitter](https://www.ebay.com/itm/5-Way-Outlet-Metal-Aquarium-Air-Valve-Splitter-with-5mm-Tube-Diameter-YM/172053425098?hash=item280f2eebca:rk:16:pf:0) | 2 | $6 |
 | [logic level MOSFET](https://www.ebay.com/itm/20Pcs-IRLZ44N-PBF-Power-MOSFET-Logic-Level-N-Channel-0-022OHM-TO-220-IC-Chip-USA/173493492366?hash=item2865049a8e:rk:1:pf:0) | 11 | $7 |
-| **total** |  | $64 |
+| **total** |  | $172 |
